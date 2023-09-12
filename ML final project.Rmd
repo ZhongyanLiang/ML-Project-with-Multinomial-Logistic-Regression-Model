@@ -33,11 +33,13 @@ for(i in 1:(ncol(wine)-1)){
 #ordinal multinomial model
 unique(wine$quality)
 
+library(nnet)
 # 3-9 as different level of quality.
 wine$Ordered_quality <- ordered(wine$quality, c("3","4","5","6","7","8","9"))
 wine.polr<-polr(Ordered_quality~.-quality,data=wine,Hess=T)
 summary(wine.polr)
 
+library(MASS)
 # stepwise
 null=polr(Ordered_quality~1,data=wine,Hess=T)
 step(null,scope = list(lower=null,upper=wine.polr),direction = "both")
@@ -46,7 +48,7 @@ new_w=polr(Ordered_quality ~ density + volatile + chlor +
     sugar + sulphates + tsd + pH + citric + fsd, data = wine, 
     Hess = T) # removed two variables, fixed,alcohol
 
-#VIF
+#VIF(Variance Inflation Factor)
 library(car)
 #vif(new_w)
 # tsd, ph has VIF higher than 10.
@@ -85,6 +87,7 @@ mean(Data_testing$quality==Yhat_qda) #classification rate:0.483871
 
 
 #KNN
+library(class)
 Data_training=wine[Z,]
 Data_testing=wine[-Z,]
 X.train=Data_training[,c(1:11)]
@@ -101,6 +104,7 @@ knn.rate[1] # classification rate =0.5827
 
 
 #random forest
+library(MASS)
 rf=randomForest(quality~.-Ordered_quality,data=wine)
 rf
 varImpPlot(rf)
