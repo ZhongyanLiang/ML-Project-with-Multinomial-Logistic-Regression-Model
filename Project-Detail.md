@@ -15,6 +15,7 @@ Two non-significant variables could be removed from the model.
 ![Model Summary](/assets/Model_Summary.png)
 
 The classification rate of the ordinal logistic regression model is $` 0.4953 `$ . 
-![Ordinal_Logistic_Regression](/assets/Initial_Classification_Rate.png)
+
+![Ordinal_Logistic_Regression](assets/Initial_Classification_Rate.png)
 
 
