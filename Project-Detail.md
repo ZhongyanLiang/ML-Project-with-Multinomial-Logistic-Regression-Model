@@ -11,7 +11,7 @@ After conducting a VIF test, we find multicollinearity, which means some predict
 
 ## Stepwise Variables Selection
 Two non-significant variables could be removed from the model. 
-![Stepwise](/assets/img/Variable Selection.png)
+![Variable Selection](/assets/img/Variable Selection.png)
 
 
 
