@@ -3,15 +3,18 @@ We are interested in analyzing the white_wine dataset for predicting the level o
 
 ## Initial Model
 Wine Quality is an ordered factor response variable, using Ordinal Multinomial Model is first preliminary choice. 
-![Fit Model](/assets/img/Fit-Model.png)
+![Fit Model](/assets/Fit-Model.png)
 
 ## VIF
 After conducting a VIF test, we find multicollinearity, which means some predictors are not independent, as two variables (tsd & pH) have VIF exceed 10. 
-![VIF](/assets/img/VIF.png)
+![VIF](/assets/VIF.png)
 
 ## Stepwise Variables Selection
 Two non-significant variables could be removed from the model. 
-![Variable Selection](/assets/img/Variable Selection.png)
+![Variable Selection](/assets/Variable_Selection.png)
+![Model Summary](/assets/Model_Summary.png)
 
+**The classification rate of the ordinal logistic regression model is 0\.4953\. **
+![Ordinal Logistic Regression](/assets/Initial_Classification_Rate.png)
 
 
