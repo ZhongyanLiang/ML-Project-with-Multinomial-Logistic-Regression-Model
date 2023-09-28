@@ -3,9 +3,10 @@ We are interested in analyzing the white_wine dataset for predicting the level o
 
 ## Initial Model
 Wine Quality is an ordered factor response variable, using Ordinal Multinomial Model is first preliminary choice. 
-![Fit Model](/assets/Fit-Model.jpg)
+![Fit Model](/assets/img/Fit-Model.jpg)
 
 ## VIF
 After conducting a VIF test, we find multicollinearity, which means some predictors are not independent, as two variables (tsd & pH) have VIF exceed 10. 
-![VIF](/assets/VIF.jpg)
+![VIF](/assets/img/VIF.jpg)
+
 
