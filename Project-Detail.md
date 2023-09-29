@@ -40,7 +40,20 @@ The random forest method gives out a much higher classification rate, which clas
 ![RF_result](assets/RF_result.png)
 
 We optimized both m and number of trees by cross-validation. We got m=p=3.
-![RF m=p=3](assets/RF m=p=3.png)
+![RF m=p=3](assets/RF_m=p=3.png)
+
+Bagging (m=p=3) was the best choice among random forests.
+![RF_Index_Chart](assets/RF_line_chart.png)
+
+![Bagging](assets/bagging.png)
+
+We fit the model again with the optimized random forest but it did not reduce bagging.
+![Optimal_RF](assets/Optimal_RF.png)
+
+![Optimal_RF](assets/Optimal_RF_2.png)
+
+
+
 
 
 
